@@ -1,0 +1,20 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "src",
+        "declaration": false,
+        "target": "es6",
+        "lib": [
+            "es2016",
+            "dom"
+        ],
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "test"
+    ]
+}
