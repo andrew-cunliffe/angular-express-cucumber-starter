@@ -6,6 +6,12 @@ Simple project extracted from my personal project to help others get started wit
 
 This project is an extract from my company project building an ecommerce solution for small businesses, as others have asked how the project is setup I have posted a cut down version for others to look at and consider how I have done things to enable the best efficency, this extract does not include things like running in a CI/CD environment which the main project does.
 
+### Development requirements
+
+- [Node](https://nodejs.org) requires support for ES6 (6.10.x or later) recommend using current LTS
+- [Angular CLI](https://cli.angular.io) used to build the angular website `npm install -g @angular/cli`
+- An [IDE](https://www.jetbrains.com/webstorm/) for building rich web applications
+
 ### Running the project
 
 - Install Dependencies `npm install`
@@ -13,6 +19,8 @@ This project is an extract from my company project building an ecommerce solutio
 - Run in development mode (auto refresh of changes) `npm run develop`
 - Build a production ready deployment `npm run build`
 - Start for production use `npm start`
+
+*The web based user interface will load up on http://localhost:8080*
 
 ### Notes
 
