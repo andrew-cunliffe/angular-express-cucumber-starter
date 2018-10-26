@@ -11,18 +11,18 @@
 
                 <div fxLayout="row" fxLayoutAlign="space-around start">
                     <div>
-                        <a href="https://angular.io" color="primary" md-button md-raised-button>Angular Framework</a>
+                        <a href="https://angular.io" color="primary" mat-button mat-raised-button>Angular Framework</a>
 
-                        <md-nav-list>
-                            <a md-list-item *ngFor="let link of angularLinks" target="_blank" [href]="link.link">{{ link.name }}</a>
-                        </md-nav-list>
+                        <mat-nav-list>
+                            <a mat-list-item *ngFor="let link of angularLinks" target="_blank" [href]="link.link">{{ link.name }}</a>
+                        </mat-nav-list>
                     </div>
                     <div>
-                        <a href="https://material.angular.io" color="primary" md-button md-raised-button>Material Angular</a>
+                        <a href="https://material.angular.io" color="primary" mat-button mat-raised-button>Material Angular</a>
 
-                        <md-nav-list>
-                            <a md-list-item *ngFor="let link of materialLinks" target="_blank" [href]="link.link">{{ link.name }}</a>
-                        </md-nav-list>
+                        <mat-nav-list>
+                            <a mat-list-item *ngFor="let link of materialLinks" target="_blank" [href]="link.link">{{ link.name }}</a>
+                        </mat-nav-list>
                     </div>
                 </div>
             </section>

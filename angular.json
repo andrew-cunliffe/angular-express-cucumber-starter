@@ -1,0 +1,96 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "www": {
+            "root": "",
+            "sourceRoot": "client",
+            "projectType": "application",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/",
+                        "index": "client/index.html",
+                        "main": "client/main.ts",
+                        "tsConfig": "client/tsconfig.json",
+                        "polyfills": "client/polyfills.ts",
+                        "assets": [
+                            "client/assets",
+                            "client/favicon.ico"
+                        ],
+                        "styles": [
+                            "client/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "client/environments/environment.ts",
+                                    "with": "client/environments/environment.prod.ts"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "www:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "www:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "www:build"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "client/tsconfig.json"
+                        ],
+                        "exclude": []
+                    }
+                }
+            }
+        },
+        "www-e2e": {
+            "root": "e2e",
+            "sourceRoot": "e2e",
+            "projectType": "application"
+        }
+    },
+    "defaultProject": "www",
+    "schematics": {
+        "@schematics/angular:component": {
+            "spec": false,
+            "inlineStyle": true,
+            "inlineTemplate": true,
+            "prefix": "src",
+            "styleext": "scss"
+        },
+        "@schematics/angular:directive": {
+            "spec": false,
+            "prefix": "src"
+        }
+    }
+}

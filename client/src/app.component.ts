@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DemoService } from './demo.service';
-import { Link } from './link';
+import { DemoService } from './services';
+import { Link } from './models';
 
 @Component({
     selector: 'app-root',
@@ -13,12 +13,12 @@ export class AppComponent implements OnInit {
     angularLinks: Link[] = [];
     materialLinks: Link[] = [];
 
-    constructor(private demoService: DemoService) {
-        // empty constructor
-    }
+    constructor(
+        private demoService: DemoService
+    ) { }
 
     ngOnInit(): void {
-        this.demoService.getAngular().then((links) => this.angularLinks = links);
-        this.demoService.getMaterial().then((links) => this.materialLinks = links);
+        this.demoService.getAngular().subscribe((links) => this.angularLinks = links);
+        this.demoService.getMaterial().subscribe((links) => this.materialLinks = links);
     }
 }
