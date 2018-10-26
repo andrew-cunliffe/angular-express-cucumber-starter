@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as http from 'http';
 import * as path from 'path';
+import { AddressInfo } from 'net';
 
 import { config } from './config';
 import { DemoController } from './controllers/demo';
@@ -34,7 +35,7 @@ server.listen(port);
 server.on('listening', listening);
 
 function listening() {
-    const addr = server.address();
+    const addr: AddressInfo = <AddressInfo>server.address();
     console.log(`Listening on ${addr.address}:${addr.port}`);
 }
 

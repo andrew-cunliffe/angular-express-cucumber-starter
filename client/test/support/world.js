@@ -1,4 +1,4 @@
-const { defineSupportCode } = require('cucumber');
+const { setWorldConstructor } = require('cucumber');
 
 class World {
     constructor() {
@@ -6,5 +6,4 @@ class World {
     }
 }
 
-defineSupportCode(({ setWorldConstructor }) => setWorldConstructor(World));
-defineSupportCode(({ setDefaultTimeout }) => setDefaultTimeout(10 * 1000));
+setWorldConstructor(World);

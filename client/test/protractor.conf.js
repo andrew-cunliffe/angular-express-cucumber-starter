@@ -12,7 +12,6 @@ exports.config = {
     ],
 
     cucumberOpts: {
-        format: 'pretty',
         require: './**/*.js',
         tags: '~@Ignore'
     },

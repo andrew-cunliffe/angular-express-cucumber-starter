@@ -2,10 +2,7 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
         "module": "commonjs",
-        "outDir": "../dist/client",
         "target": "es5",
-        "types": [],
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "types": []
     }
 }

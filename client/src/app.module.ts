@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-
+import { MatButtonModule, MatListModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MdButtonModule, MdListModule } from '@angular/material';
-
 import { AppComponent } from './app.component';
-import { DemoService } from './demo.service';
 
 @NgModule({
     declarations: [
@@ -18,12 +14,11 @@ import { DemoService } from './demo.service';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpModule,
+        HttpClientModule,
         FlexLayoutModule,
-        MdButtonModule,
-        MdListModule
+        MatButtonModule,
+        MatListModule
     ],
-    providers: [DemoService],
     bootstrap: [AppComponent]
 })
 

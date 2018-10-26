@@ -1,6 +1,24 @@
-## angular4-express4-cucumber
+## angular-express-cucumber
 
 Simple project extracted from my personal project to help others get started with angular, express, typescript, cucumber and coverage.
+
+### Frameworks
+
+- Angular Framework  
+  [Website](https://angular.io)  
+  [GitHub](https://github.com/angular/angular)
+
+- Angular Material  
+  [Website](https://material.angular.io)  
+  [GitHub](https://github.com/angular/material2)
+
+- Express Framework  
+  [Website](http://expressjs.com)  
+  [GitHub](https://github.com/expressjs/express)
+
+- Cucumber e2e  
+  [Website](https://cucumber.io)  
+  [GitHub](https://github.com/cucumber/cucumber-js)
 
 ### Objectives
 
